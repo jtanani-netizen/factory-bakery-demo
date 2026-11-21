@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Factory Bakery — Puerto Rican Bakery &amp; Latin Restaurant, Orlando FL</title>
+<meta name="description" content="The Factory Bakery is a Puerto Rican bakery and Latin restaurant at 8700 E Colonial Dr, Orlando FL 32817. Rated 4.8 on Google. Mofongo, pernil, tripleta sandwiches, quesitos and pastries. Call (689) 263-7051.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Work+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fdf6ea; --bg2:#f7e8d2; --card:#fffdf7; --ink:#332219; --ink2:#5d4636;
+  --muted:#9a7f68; --line:#eeddc2; --line2:#dfc294;
+  --brick:#9e2b1e; --brick2:#7e2015; --terra:#c65a2e; --gold:#d99a2b; --cream:#fdf6ea;
+  --shadow:0 20px 45px rgba(51,34,25,.14);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Work Sans',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55;overflow-x:clip}
+img{max-width:100%;display:block}
+h1,h2,h3,.disp{font-family:'Alfa Slab One',serif;font-weight:400;letter-spacing:.01em}
+.wrap{width:min(1180px,100% - 40px);margin-inline:auto}
+.demo-ribbon{background:var(--brick2);color:#f7e8d2;text-align:center;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;padding:.45rem 1rem}
+.demo-ribbon b{color:#ffd98a}
+header.site{position:sticky;top:0;z-index:60;background:rgba(253,246,234,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.hd{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.6rem 0}
+.logo{display:flex;align-items:center;gap:.7rem;text-decoration:none;color:var(--ink);min-width:0}
+.logo-mark{width:46px;height:46px;border-radius:12px;background:var(--brick);color:#fff;display:grid;place-items:center;font-family:'Alfa Slab One',serif;font-size:1.2rem;flex:none;transform:rotate(-3deg)}
+.logo b{font-family:'Alfa Slab One',serif;font-size:1.22rem;display:block;line-height:1.05;white-space:nowrap}
+.logo small{font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;color:var(--terra);font-weight:800}
+nav.main{display:flex;gap:1.7rem}
+nav.main a{color:var(--ink2);text-decoration:none;font-weight:700;font-size:.93rem}
+nav.main a:hover{color:var(--brick)}
+.hd-actions{display:flex;align-items:center;gap:.6rem;flex:none}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;border:none;cursor:pointer;font:inherit;font-weight:800;border-radius:999px;padding:.7rem 1.35rem;text-decoration:none;transition:.2s;font-size:.95rem}
+.btn-brick{background:var(--brick);color:#fff}
+.btn-brick:hover{background:var(--brick2)}
+.btn-terra{background:var(--terra);color:#fff}
+.btn-terra:hover{background:var(--brick)}
+.btn-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line2)}
+.btn-ghost:hover{border-color:var(--brick);color:var(--brick)}
+.cart-btn{position:relative;background:var(--ink);color:#fff;border:none;border-radius:999px;padding:.62rem 1.05rem;font:inherit;font-weight:800;cursor:pointer;display:inline-flex;gap:.5rem;align-items:center}
+.cart-count{background:var(--terra);color:#fff;border-radius:999px;min-width:22px;height:22px;display:grid;place-items:center;font-size:.78rem;padding:0 5px;font-weight:800}
+.hero{position:relative;min-height:92svh;display:flex;align-items:flex-end;color:#fff;isolation:isolate;overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:-2}
+.hero-bg img{width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(46,18,8,.55) 0%,rgba(46,18,8,.16) 38%,rgba(46,18,8,.66) 68%,rgba(38,13,5,.95) 100%)}
+.hero-in{padding-top:7rem;padding-bottom:3.4rem}
+.hero .kicker{color:#ffd98a;font-weight:800;letter-spacing:.3em;text-transform:uppercase;font-size:.78rem}
+.hero h1{font-size:clamp(2.5rem,7vw,4.6rem);line-height:1.05;max-width:16ch;margin:.55rem 0 .9rem;text-shadow:0 4px 30px rgba(0,0,0,.45)}
+.hero h1 em{font-style:normal;color:#ffb59d}
+.hero p{max-width:56ch;font-size:clamp(1.02rem,1.7vw,1.2rem);color:#fdf0dd}
+.hero-rating{display:inline-flex;align-items:center;gap:.55rem;background:rgba(0,0,0,.42);border:1px solid rgba(255,217,138,.55);backdrop-filter:blur(6px);border-radius:999px;padding:.42rem .95rem;font-weight:700;font-size:.92rem;margin-top:1.3rem}
+.hero-rating .stars{color:#ffd98a;letter-spacing:.08em}
+.hero-cta{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.5rem}
+.hero-badges{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.1rem}
+.hbadge{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.32);backdrop-filter:blur(6px);border-radius:999px;padding:.35rem .85rem;font-size:.82rem;font-weight:700}
+.marquee{background:var(--brick);color:#ffe9d6;overflow:hidden;padding:.6rem 0}
+.marquee-track{display:flex;gap:2.6rem;white-space:nowrap;animation:mq 30s linear infinite;width:max-content}
+.marquee span{font-family:'Alfa Slab One',serif;font-size:1rem;letter-spacing:.05em}
+.marquee i{color:#ffd98a;font-style:normal}
+@keyframes mq{to{transform:translateX(-50%)}}
+section{padding:4.4rem 0}
+.sec-head{max-width:680px;margin-bottom:2.1rem}
+.sec-head .kicker{color:var(--brick);font-weight:800;letter-spacing:.22em;text-transform:uppercase;font-size:.74rem}
+.sec-head h2{font-size:clamp(1.9rem,4vw,2.7rem);line-height:1.12;margin:.35rem 0 .55rem}
+.sec-head p{color:var(--muted)}
+.sig-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+.sig{background:var(--card);border:1px solid var(--line);border-radius:24px;overflow:hidden;display:flex;flex-direction:column;min-width:0;transition:.2s}
+.sig:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:var(--line2)}
+.sig .ph{position:relative}
+.sig .ph img{width:100%;height:210px;object-fit:cover}
+.sig .tag{position:absolute;top:.8rem;left:.8rem;background:var(--brick);color:#fff;font-size:.7rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;border-radius:999px;padding:.3rem .7rem}
+.sig .bd{padding:1.15rem 1.2rem 1.25rem;display:flex;flex-direction:column;gap:.4rem;flex:1}
+.sig h3{font-size:1.3rem;line-height:1.15}
+.sig p{color:var(--muted);font-size:.92rem;flex:1}
+.sig .row{display:flex;align-items:center;justify-content:space-between;padding-top:.55rem;gap:.6rem}
+.price{font-family:'Alfa Slab One',serif;font-size:1rem;color:var(--terra)}
+.add-btn{background:var(--brick);color:#fff;border:none;width:40px;height:40px;border-radius:50%;font-size:1.35rem;font-weight:800;cursor:pointer;display:grid;place-items:center;line-height:1;flex:none}
+.add-btn:hover{background:var(--terra)}
+.about-sec{background:var(--bg2);border-block:1px solid var(--line)}
+.about{display:grid;grid-template-columns:.95fr 1.05fr;gap:2.6rem;align-items:center}
+.about-img{border-radius:24px;overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--line)}
+.about-img img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3.2}
+.quote{font-family:'Alfa Slab One',serif;font-size:1.12rem;line-height:1.5;color:var(--ink2);border-left:3px solid var(--gold);padding-left:1rem;margin-top:1.2rem}
+.tabs{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.6rem}
+.tab{border:1.5px solid var(--line2);background:transparent;color:var(--ink2);border-radius:999px;padding:.52rem 1.05rem;font:inherit;font-weight:800;font-size:.9rem;cursor:pointer;transition:.15s}
+.tab:hover{border-color:var(--brick);color:var(--brick)}
+.tab.on{background:var(--brick);border-color:var(--brick);color:#fff}
+.cat-banner{border-radius:20px;overflow:hidden;margin-bottom:1.4rem;position:relative;box-shadow:var(--shadow);border:1px solid var(--line)}
+.cat-banner img{width:100%;height:200px;object-fit:cover}
+.cat-banner figcaption{position:absolute;left:0;right:0;bottom:0;padding:2.2rem 1.25rem .95rem;color:#fff;font-family:'Alfa Slab One',serif;font-size:1.5rem;background:linear-gradient(transparent,rgba(38,13,5,.85))}
+.dish-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(258px,1fr));gap:1rem}
+.dish{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:1.05rem 1.12rem;display:flex;flex-direction:column;gap:.32rem;transition:.15s;min-width:0}
+.dish:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--line2)}
+.dish h3{font-size:1.22rem;line-height:1.18}
+.dish p{color:var(--muted);font-size:.88rem;flex:1}
+.dish .row{margin-top:auto;display:flex;align-items:center;justify-content:space-between;padding-top:.5rem;gap:.6rem}
+.dish .pop{font-size:.66rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:var(--gold);border-radius:999px;padding:.22rem .6rem;align-self:flex-start;color:#332219}
+.note{margin-top:1.5rem;font-size:.86rem;color:var(--muted);border-left:3px solid var(--terra);padding-left:.9rem}
+.rev-sec{background:var(--bg2);border-block:1px solid var(--line)}
+.rev-layout{display:grid;grid-template-columns:.85fr 1.15fr;gap:2.4rem;align-items:center}
+.big-score{font-family:'Alfa Slab One',serif;font-size:clamp(4.5rem,9vw,7rem);line-height:.9;color:var(--ink)}
+.big-score .stars{display:block;font-size:clamp(1.5rem,3vw,2.1rem);color:var(--gold);letter-spacing:.18em;margin:.4rem 0}
+.rev-cards{display:grid;gap:1rem}
+.rev{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:1.3rem 1.4rem}
+.rev .outlet{font-size:.7rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--brick)}
+.rev p{font-family:'Alfa Slab One',serif;font-size:1.08rem;line-height:1.4;margin:.45rem 0 .5rem}
+.rev small{color:var(--muted);font-weight:700}
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem}
+.gal figure{border-radius:18px;overflow:hidden;border:1px solid var(--line);min-width:0}
+.gal img{width:100%;height:100%;object-fit:cover;aspect-ratio:1;transition:.4s}
+.gal figure:hover img{transform:scale(1.05)}
+.gal .wide{grid-column:span 2}
+.gal .wide img{aspect-ratio:2/1.02}
+.visit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.visit{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:1.45rem;min-width:0}
+.visit .ic{font-size:1.5rem;margin-bottom:.5rem}
+.visit h3{font-size:1.3rem;margin-bottom:.3rem}
+.visit p{color:var(--muted);font-size:.94rem}
+.visit .tel{font-weight:800;color:var(--brick);font-size:1.22rem;margin:.55rem 0;text-decoration:none;display:inline-block}
+.visit a.map{color:var(--terra);font-weight:700;text-decoration:none}
+.visit a.map:hover{text-decoration:underline}
+footer{background:var(--ink);color:#d9c3a5;padding:3.2rem 0 7rem}
+.ft{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:2rem}
+footer h4{color:#fff;font-family:'Alfa Slab One',serif;font-size:1.25rem;margin-bottom:.6rem}
+footer a{color:#d9c3a5;text-decoration:none}
+footer a:hover{color:#ffd98a}
+.ft small{display:block;margin-top:1.6rem;color:#a68a67;line-height:1.5}
+.call-fab{position:fixed;right:18px;bottom:26px;z-index:70;width:58px;height:58px;border-radius:50%;background:var(--brick);color:#fff;display:grid;place-items:center;box-shadow:0 14px 34px rgba(0,0,0,.35);text-decoration:none;border:2px solid rgba(255,255,255,.4)}
+.qr-sec{text-align:center}
+.qr-sec .eyebrow{color:var(--brick);letter-spacing:.22em;font-size:.72rem;font-weight:800;text-transform:uppercase}
+.qr-sec h2{font-family:'Alfa Slab One',serif;font-size:clamp(1.8rem,5.5vw,2.6rem);margin:.5rem 0 .7rem}
+.qr-sec p{color:var(--muted);max-width:560px;margin:0 auto;line-height:1.6}
+.qr-card{display:inline-block;background:#fff;border-radius:20px;padding:20px 20px 14px;margin-top:1.6rem;box-shadow:var(--shadow);border:1px solid var(--line);max-width:82vw}
+.qr-card img{width:210px;max-width:100%;height:auto;display:block}
+.qr-card b{display:block;color:var(--ink);font-size:.8rem;letter-spacing:.14em;margin-top:.6rem}
+.qr-card small{display:block;color:var(--muted);font-size:.72rem;letter-spacing:.08em}
+.mobilebar{position:fixed;left:0;right:0;bottom:0;z-index:65;background:rgba(253,246,234,.97);border-top:1px solid var(--line2);display:none;padding:.55rem .7rem calc(.55rem + env(safe-area-inset-bottom));gap:.55rem;align-items:stretch}
+.mobilebar a,.mobilebar button{flex:1;min-width:0}
+.mobilebar .btn{width:100%;padding:.68rem .3rem;font-size:.86rem;white-space:nowrap;gap:.35rem}
+.mobilebar .tot{display:flex;flex-direction:column;justify-content:center;align-items:center;background:var(--ink);border-radius:999px;padding:.3rem .5rem;flex:1;min-width:0;color:#fff;border:none;cursor:pointer;font:inherit}
+.mobilebar .tot small{font-size:.6rem;color:#e8cfa5;letter-spacing:.1em;text-transform:uppercase;font-weight:700}
+.mobilebar .tot b{font-family:'Alfa Slab One',serif;font-size:1.05rem;line-height:1;color:#fff}
+.overlay{position:fixed;inset:0;background:rgba(38,18,8,.55);z-index:80;opacity:0;pointer-events:none;transition:.25s}
+.overlay.open{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(430px,94vw);background:var(--bg);z-index:90;transform:translateX(105%);transition:.3s;display:flex;flex-direction:column;box-shadow:-20px 0 60px rgba(0,0,0,.3);border-left:1px solid var(--line)}
+.drawer.open{transform:none}
+.drawer header{padding:1.1rem 1.2rem;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line)}
+.drawer header h3{font-size:1.4rem}
+.close-x{background:none;border:none;font-size:1.6rem;cursor:pointer;color:var(--ink);line-height:1}
+.drawer .items{flex:1;overflow-y:auto;padding:1rem 1.2rem;display:flex;flex-direction:column;gap:.8rem}
+.citem{display:flex;gap:.7rem;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:.6rem .7rem}
+.citem .nm{flex:1;min-width:0}
+.citem .nm b{display:block;font-size:.93rem;line-height:1.25}
+.citem .nm span{color:var(--brick);font-weight:700;font-size:.88rem}
+.qty{display:flex;align-items:center;gap:.35rem;flex:none}
+.qty button{width:28px;height:28px;border-radius:50%;border:1.5px solid var(--line2);background:transparent;color:var(--ink);cursor:pointer;font-weight:800;line-height:1}
+.qty b{min-width:18px;text-align:center}
+.empty{color:var(--muted);text-align:center;padding:2rem 0}
+.drawer .form{border-top:1px solid var(--line);padding:1rem 1.2rem 1.2rem;background:var(--card)}
+.drawer .total-row{display:flex;justify-content:space-between;font-family:'Alfa Slab One',serif;font-size:1.25rem;margin:.75rem 0}
+.drawer .checkout{width:100%;justify-content:center;font-size:1.02rem;padding:.85rem;margin-bottom:.55rem}
+.drawer .alt{width:100%;justify-content:center}
+.drawer .hint{font-size:.8rem;color:var(--muted);text-align:center;margin-top:.55rem}
+.toast{position:fixed;left:50%;bottom:112px;transform:translate(-50%,20px);background:var(--brick);color:#fff;padding:.6rem 1.1rem;border-radius:999px;font-size:.9rem;font-weight:800;opacity:0;pointer-events:none;transition:.25s;z-index:120;max-width:92vw;text-align:center}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:900px){
+  nav.main{display:none}
+  .hd{gap:.6rem}
+  .hd-actions .btn-terra{display:none}
+  .cart-btn{padding:.55rem .8rem;font-size:.9rem}
+  .logo b{font-size:1.05rem}
+  .logo small{font-size:.55rem;letter-spacing:.16em}
+  .logo-mark{width:40px;height:40px;font-size:1.05rem}
+  .sig-grid{grid-template-columns:1fr}
+  .about{grid-template-columns:1fr}
+  .rev-layout{grid-template-columns:1fr}
+  .visit-grid{grid-template-columns:1fr}
+  .gal{grid-template-columns:repeat(2,1fr)}
+  .ft{grid-template-columns:1fr}
+  .mobilebar{display:flex}
+  .call-fab{display:none}
+  .hero{min-height:86svh}
+  section{padding:3.3rem 0}
+}
+</style>
+<script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)};</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+<div class="demo-ribbon">Demo website — <b>The Factory Bakery</b> · Preview</div>
+
+<header class="site">
+  <div class="wrap hd">
+    <a class="logo" href="#top">
+      <span class="logo-mark">F</span>
+      <span><b>The Factory Bakery</b><small>Puerto Rican Bakery · Orlando</small></span>
+    </a>
+    <nav class="main">
+      <a href="#menu">Menu</a>
+      <a href="#story">About</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <div class="hd-actions">
+      <a class="btn btn-terra" href="https://thefactorybakeryfl.com" target="_blank" rel="noopener">Order Online</a>
+      <button class="cart-btn" id="cartOpen" aria-label="Open your order list">Your Order <span class="cart-count" id="cartCount">0</span></button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="hero-bg"><img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=1600&auto=format&fit=crop" alt="Fresh bread at The Factory Bakery, Orlando"></div>
+    <div class="wrap hero-in">
+      <div class="kicker">Puerto Rican Bakery &amp; Latin Restaurant · East Colonial</div>
+      <h1>The flavor of Puerto Rico, <em>baked fresh in Orlando.</em></h1>
+      <p>Mofongo, pernil, stacked sandwiches and pastries the way they're made on the island — with dine-in, takeout and delivery from East Colonial Drive.</p>
+      <div class="hero-rating"><span class="stars">★★★★★</span> 4.8 on Google · 88 reviews</div>
+      <div class="hero-cta">
+        <a class="btn btn-brick" href="#menu">See the Menu</a>
+        <a class="btn btn-terra" href="tel:+16892637051">(689) 263-7051</a>
+      </div>
+      <div class="hero-badges">
+        <span class="hbadge">🥖 Quesitos &amp; donas estilo PR</span>
+        <span class="hbadge">🍽️ Mofongo &amp; pernil</span>
+        <span class="hbadge">📍 8700 E Colonial Dr</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="marquee" aria-hidden="true"><div class="marquee-track" id="mq"></div></div>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Customer Favorites</div>
+        <h2>The plates Orlando orders again</h2>
+        <p>The dishes customers name as their favorites. Tap + to build your order, then call it in or order online — hot and ready when you arrive.</p>
+      </div>
+      <div class="sig-grid" id="sigGrid"></div>
+    </div>
+  </section>
+
+  <section id="menu" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Menu</div>
+        <h2>Sandwiches, kitchen plates &amp; the bakery case</h2>
+        <p>Tap <b>+</b> to add an item to your order list — then call <b>(689) 263-7051</b> or order online.</p>
+      </div>
+      <div class="tabs" id="tabs"></div>
+      <figure class="cat-banner" id="catBanner"><img id="catImg" src="" alt=""><figcaption id="catName"></figcaption></figure>
+      <div class="dish-grid" id="dishGrid"></div>
+      <p class="note">Menu favorites as listed on Restaurantji and the bakery's own website (November 2026). Prices are posted in-store and on the online ordering page — please confirm when you order.</p>
+    </div>
+  </section>
+
+  <section class="about-sec" id="story">
+    <div class="wrap about">
+      <div class="about-img"><img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=1000&auto=format&fit=crop" alt="Restaurant interior" loading="lazy"></div>
+      <div>
+        <div class="sec-head" style="margin-bottom:0">
+          <div class="kicker">About</div>
+          <h2>A cozy corner of Puerto Rico on Colonial Drive</h2>
+          <p>The Factory Bakery is a Puerto Rican bakery and Latin restaurant serving mofongo, pernil, sandwiches, pastries and traditional Latin dishes — with dine-in, takeout and delivery. Reviewers describe a cozy spot known for excellent service, flavorful food and a staff that makes customers feel like family, with dishes prepared quickly and with great care.</p>
+        </div>
+        <p class="quote">"The best in Florida — same flavor to Puerto Rico."</p>
+        <p style="color:var(--muted);margin-top:.8rem;font-size:.9rem">— From customer reviews summarized on Restaurantji</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="rev-sec" id="reviews">
+    <div class="wrap rev-layout">
+      <div>
+        <div class="sec-head" style="margin-bottom:.6rem">
+          <div class="kicker">Reviews</div>
+          <h2>Orlando keeps coming back</h2>
+        </div>
+        <div class="big-score">4.8<span class="stars">★★★★★</span></div>
+        <p style="color:var(--muted)">Average rating, from <b style="color:var(--ink)">88 reviews</b> — 93% of them five stars.</p>
+      </div>
+      <div class="rev-cards">
+        <div class="rev">
+          <span class="outlet">Customer review · via Restaurantji</span>
+          <p>"The sandwiches are 10/10 — great flavor and quality. The customer service was excellent… Everything clean and perfect! 100% recommend!"</p>
+          <small>— The Factory Bakery customer</small>
+        </div>
+        <div class="rev">
+          <span class="outlet">Customer review · via Restaurantji</span>
+          <p>"Excellent food and service! Totally recommend this restaurant!!!"</p>
+          <small>— The Factory Bakery customer</small>
+        </div>
+        <div class="rev">
+          <span class="outlet">Customer review · via Restaurantji</span>
+          <p>"Very clean. good coffee, nice food, awesome staff. Excellent service."</p>
+          <small>— The Factory Bakery customer</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Gallery</div>
+        <h2>Fresh from the factory</h2>
+      </div>
+      <div class="gal">
+        <figure class="wide"><img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=1000&auto=format&fit=crop" alt="Fresh loaves of bread" loading="lazy"></figure>
+        <figure><img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=700&auto=format&fit=crop" alt="Croissants and pastries" loading="lazy"></figure>
+        <figure><img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?q=80&w=700&auto=format&fit=crop" alt="Stacked sandwich" loading="lazy"></figure>
+        <figure><img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?q=80&w=700&auto=format&fit=crop" alt="Rice plate" loading="lazy"></figure>
+        <figure><img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?q=80&w=700&auto=format&fit=crop" alt="Dessert" loading="lazy"></figure>
+        <figure><img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?q=80&w=700&auto=format&fit=crop" alt="Fried turnovers" loading="lazy"></figure>
+        <figure class="wide"><img src="https://images.unsplash.com/photo-1587248720327-8eb72564be1e?q=80&w=1000&auto=format&fit=crop" alt="Bakery shelves" loading="lazy"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="visit" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Visit</div>
+        <h2>Come hungry</h2>
+      </div>
+      <div class="visit-grid">
+        <div class="visit">
+          <div class="ic">📍</div>
+          <h3>Address</h3>
+          <p>8700 E Colonial Dr<br>Orlando, FL 32817</p>
+          <p style="margin-top:.6rem"><a class="map" href="https://www.google.com/maps/search/?api=1&query=The+Factory+Bakery+8700+E+Colonial+Dr+Orlando+FL+32817" target="_blank" rel="noopener">Get directions →</a></p>
+        </div>
+        <div class="visit">
+          <div class="ic">🕖</div>
+          <h3>Hours</h3>
+          <p><b style="color:var(--ink)">Tue – Thu</b> — 7:00 AM to 6:00 PM<br><b style="color:var(--ink)">Friday</b> — 7:00 AM to 8:00 PM<br><b style="color:var(--ink)">Saturday</b> — 8:00 AM to 8:00 PM<br><b style="color:var(--ink)">Sunday</b> — 9:00 AM to 6:00 PM<br><b style="color:var(--ink)">Monday</b> — Closed</p>
+          <p style="margin-top:.5rem">Hours as published on the bakery's own website.</p>
+        </div>
+        <div class="visit">
+          <div class="ic">📞</div>
+          <h3>Order ahead</h3>
+          <p>Call the counter — or order online for pickup and delivery:</p>
+          <a class="tel" href="tel:+16892637051">(689) 263-7051</a>
+          <p><a class="map" href="https://www.instagram.com/thefactorybakery_fl" target="_blank" rel="noopener">Instagram — @thefactorybakery_fl →</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<section class="qr-sec" id="tables">
+  <div class="wrap">
+    <div class="eyebrow">Included with your website</div>
+    <h2>A QR code on every table</h2>
+    <p>Guests scan the card on the table and the menu, hours and ordering open on their phone — no app, no searching. This one already works: scan it, it opens this very page.</p>
+    <div class="qr-card">
+      <img src="qr-factory-bakery.png" alt="QR code opening The Factory Bakery website">
+      <b>THE FACTORY BAKERY · ORLANDO</b>
+      <small>SCAN FOR THE MENU</small>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap ft">
+    <div>
+      <h4>The Factory Bakery</h4>
+      <p>Puerto Rican bakery and Latin restaurant on East Colonial: mofongo, pernil, tripleta sandwiches, quesitos and donas — the same flavor as Puerto Rico, in Orlando.</p>
+      <small>Demo website created for presentation purposes. Photos: Unsplash (illustrative). Menu favorites, hours and phone as published on thefactorybakeryfl.com and Restaurantji, November 2026 — prices posted in-store; please confirm when ordering.</small>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p>8700 E Colonial Dr<br>Orlando, FL 32817<br><a href="tel:+16892637051">(689) 263-7051</a></p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <p>
+        <a href="#menu">Menu</a><br>
+        <a href="https://thefactorybakeryfl.com" target="_blank" rel="noopener">Order Online</a><br>
+        <a href="https://www.instagram.com/thefactorybakery_fl" target="_blank" rel="noopener">Instagram — @thefactorybakery_fl</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<a class="call-fab" href="tel:+16892637051" aria-label="Call The Factory Bakery"><svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor" aria-hidden="true"><path d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z"/></svg></a>
+
+<div class="mobilebar">
+  <a class="btn btn-ghost" href="tel:+16892637051"><svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor" aria-hidden="true"><path d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z"/></svg> Call</a>
+  <a class="btn btn-brick" href="https://thefactorybakeryfl.com" target="_blank" rel="noopener">Order Online</a>
+  <button class="tot" data-open-cart><small>Your order</small><b id="mbTotal">0 items</b></button>
+</div>
+
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer" aria-label="Your order list">
+  <header>
+    <h3>Your Order</h3>
+    <button class="close-x" id="cartClose" aria-label="Close">×</button>
+  </header>
+  <div class="items" id="cartItems"></div>
+  <div class="form">
+    <div class="total-row"><span>Items</span><span id="drawerTotal">0</span></div>
+    <a class="btn btn-brick checkout" href="tel:+16892637051">Call (689) 263-7051 to order</a>
+    <a class="btn btn-ghost alt" href="https://thefactorybakeryfl.com" target="_blank" rel="noopener">Order online instead</a>
+    <p class="hint">Prices are confirmed when you order — in-store and online prices are posted by the bakery.</p>
+  </div>
+</aside>
+
+<div class="toast" id="toast">Added to your order ✓</div>
+
+<script>
+const IMG = {
+  sand:"https://images.unsplash.com/photo-1528735602780-2552fd46c7af?q=80&w=1100&auto=format&fit=crop",
+  kitchen:"https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?q=80&w=1100&auto=format&fit=crop",
+  bakery:"https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=1100&auto=format&fit=crop"
+};
+/* Menu favorites as listed on Restaurantji + the bakery's own site (Nov 2026) — prices posted in-store */
+const CATS = [
+ {cat:"Sandwiches", img:"sand", items:[
+   {name:"Tripleta Sandwich", desc:"The stacked favorite — served with lettuce, tomato, mayo and ketchup.", flag:"pop", tag:"Favorite"},
+   {name:"Sandwich de Jamón, Queso y Huevo", desc:"Ham, cheese and egg — a customer favorite, breakfast or anytime.", flag:"pop", tag:"Favorite"},
+   {name:"Pastrami Sandwich", desc:"Named among the house favorites on Restaurantji."},
+   {name:"Breakfast Sandwich", desc:"Morning, the Puerto Rican way."}]},
+ {cat:"From the Kitchen", img:"kitchen", items:[
+   {name:"Pechuga a la Plancha", desc:"Grilled chicken breast — a customer favorite.", flag:"pop", tag:"Favorite"},
+   {name:"Chicharrones de Pollo", desc:"Fried chicken chunks, crispy and seasoned.", flag:"pop", tag:"Favorite"},
+   {name:"Carne Frita", desc:"Fried pork chunks — 'bien rica,' as regulars put it."},
+   {name:"Mofongo", desc:"The presentation of the mofongo is called exceptional by reviewers."},
+   {name:"Pernil", desc:"Roast pork, straight from the bakery's own menu description."},
+   {name:"Pork Chunks with Arroz con Gandules", desc:"Pork chunks with rice and pigeon peas — a plate reviewers name."},
+   {name:"Sancocho", desc:"The hearty soup visitors call out by name."},
+   {name:"Steak & Onions with Guineitos", desc:"Steak and onions with green bananas, from customer favorites."}]},
+ {cat:"Bakery & Sweets", img:"bakery", items:[
+   {name:"Quesitos", desc:"Highly recommended by visitors — a Puerto Rican classic.", flag:"pop", tag:"Must try"},
+   {name:"Donas al Estilo de PR", desc:"Donuts, Puerto Rico style — highly recommended.", flag:"pop", tag:"Must try"},
+   {name:"Pastries", desc:"Traditional pastries from the bakery case, fresh through the day."},
+   {name:"Café Latte", desc:"For the coffee break — the cozy pause reviewers mention."}]}
+];
+const SIGNATURES = [
+ {name:"Tripleta Sandwich", img:"https://images.unsplash.com/photo-1509722747041-616f39b57569?q=80&w=900&auto=format&fit=crop", desc:"The sandwich customers rate 10/10 — stacked, sauced and served with lettuce, tomato, mayo and ketchup.", tag:"Favorite", note:"Sandwiches"},
+ {name:"Mofongo", img:"https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?q=80&w=900&auto=format&fit=crop", desc:"A headliner of the kitchen, named first on the bakery's own site — and praised for its presentation.", tag:"House Plate", note:"From the kitchen"},
+ {name:"Quesitos", img:"https://images.unsplash.com/photo-1551024506-0bccd828d307?q=80&w=900&auto=format&fit=crop", desc:"Flaky, sweet and 'highly recommended' by visitors — the bakery case at its most Puerto Rican.", tag:"Must Try", note:"Bakery case"}
+];
+
+const cart = new Map();
+const $ = s => document.querySelector(s);
+const tabsEl = $("#tabs"), gridEl = $("#dishGrid");
+let currentCat = CATS[0].cat;
+
+CATS.forEach(c=>{
+  const b=document.createElement("button");
+  b.className="tab"+(c.cat===currentCat?" on":"");
+  b.textContent=c.cat;
+  b.onclick=()=>{currentCat=c.cat;document.querySelectorAll(".tab").forEach(t=>t.classList.toggle("on",t.textContent===c.cat));renderCat();};
+  tabsEl.appendChild(b);
+});
+
+function esc(s){return s.replace(/'/g,"\\'")}
+function dishCard(it){
+  const pop = it.flag==="pop" ? `<span class="pop">★ ${it.tag||"Popular"}</span>` : "";
+  return `<article class="dish">${pop}<h3>${it.name}</h3><p>${it.desc||""}</p>
+    <div class="row"><div class="price">in-store</div>
+    <button class="add-btn" title="Add to your order" onclick="addItem('${esc(it.name)}')">+</button></div></article>`;
+}
+function renderCat(){
+  const c = CATS.find(x=>x.cat===currentCat);
+  $("#catImg").src = IMG[c.img];
+  $("#catName").textContent = c.cat;
+  gridEl.innerHTML = c.items.map(dishCard).join("");
+}
+$("#sigGrid").innerHTML = SIGNATURES.map(s=>`
+  <article class="sig">
+    <div class="ph"><img src="${s.img}" alt="${s.name}" loading="lazy"><span class="tag">${s.tag}</span></div>
+    <div class="bd"><h3>${s.name}</h3><p>${s.desc}</p>
+    <div class="row"><div class="price">${s.note}</div>
+    <button class="add-btn" title="Add to your order" onclick="addItem('${esc(s.name)}')">+</button></div></div>
+  </article>`).join("");
+
+function addItem(name){
+  if(cart.has(name)) cart.get(name).qty++;
+  else cart.set(name,{name,qty:1});
+  updateCart(); showToast(name+" — added ✓");
+}
+function cartQty(){let q=0;cart.forEach(i=>q+=i.qty);return q}
+function updateCart(){
+  $("#cartCount").textContent = cartQty();
+  $("#mbTotal").textContent = cartQty() + (cartQty()===1?" item":" items");
+  $("#drawerTotal").textContent = cartQty();
+  const box = $("#cartItems");
+  if(cart.size===0){box.innerHTML='<p class="empty">Nothing yet.<br>Add a favorite to plan your order 🥖</p>';return}
+  box.innerHTML="";
+  cart.forEach(i=>{
+    const d=document.createElement("div");d.className="citem";
+    d.innerHTML=`<div class="nm"><b>${i.name}</b><span>order by phone or online</span></div>
+      <div class="qty"><button onclick="chQty('${esc(i.name)}',-1)">−</button><b>${i.qty}</b><button onclick="chQty('${esc(i.name)}',1)">+</button></div>`;
+    box.appendChild(d);
+  });
+}
+function chQty(name,d){
+  const i=cart.get(name); if(!i) return;
+  i.qty+=d; if(i.qty<=0) cart.delete(name);
+  updateCart();
+}
+function openCart(){$("#drawer").classList.add("open");$("#overlay").classList.add("open")}
+function closeCart(){$("#drawer").classList.remove("open");$("#overlay").classList.remove("open")}
+$("#cartOpen").onclick=openCart;
+$("#cartClose").onclick=closeCart;
+$("#overlay").onclick=closeCart;
+document.querySelectorAll("[data-open-cart]").forEach(b=>b.onclick=openCart);
+
+let toastTimer;
+function showToast(t){const el=$("#toast");el.textContent=t;el.classList.add("show");clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove("show"),1800)}
+
+const mqItems = ["Mofongo & pernil","Rated 4.8 ★ on Google","Tripleta sandwiches","Quesitos & donas estilo PR","Dine-in · takeout · delivery","8700 E Colonial Dr"];
+const seq = mqItems.map(t=>`<span>${t}</span><i>✦</i>`).join("");
+$("#mq").innerHTML = seq + seq;
+
+renderCat(); updateCart();
+</script>
+</body>
+</html>
